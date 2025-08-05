@@ -16,8 +16,8 @@ def decrypt_wallet(wallet_path: str, output_path: str, key: bytes):
         Exception: If decryption fails due to incorrect key or corrupted data.
     """
     # Expand user home directory in paths
-    wallet_path = os.path.expanduser("/root/wallet1.001.dat")
-    output_path = os.path.expanduser("/root/key.txt")
+    wallet_path = os.path.expanduser("/path/to/your/wallet dat")
+    output_path = os.path.expanduser("/path/to/your/key.txt")
 
     # Check if the wallet_path is valid and the file exists
     if not os.path.isfile(wallet_path):
@@ -53,8 +53,8 @@ def decrypt_wallet(wallet_path: str, output_path: str, key: bytes):
 # Example usage
 if __name__ == "__main__":
     # Example parameters (replace with actual key and paths)
-    wallet_path = "~/root/wallet1.001.dat"
-    output_path = "~/root/key.txt"
+    wallet_path = "/path/to/your/wallet dat"
+    output_path = "/path/to/your/key.txt"
     # Example 32-byte key (replace with actual key)
     key = b"32_byte_key_here_1234567890123456"  # Must be 16, 24, or 32 bytes
 
